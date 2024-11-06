@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-950 text-white flex flex-col justify-center items-center min-h-[100dvh] space-y-4`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-950 text-white flex flex-col justify-center items-center min-h-[100dvh] gap-4`}
       >
         <h1 className="font-bold text-4xl">GitHub Finder</h1>
         {children}

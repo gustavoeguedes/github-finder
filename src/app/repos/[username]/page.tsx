@@ -13,7 +13,6 @@ export default function Repos() {
       const res = await fetch(`https://api.github.com/users/${username}/repos`);
 
       const data = await res.json();
-      console.log(data);
       setRepos(data);
     };
     if (username) {
@@ -22,12 +21,12 @@ export default function Repos() {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto p-4 space-y-4">
       <BackBtn />
-      <h2>Explore os repositórios do usuário: {username}</h2>
+      <h2 className="text-2xl">Explore os repositórios do usuário: {username}</h2>
       {repos && repos.length === 0 && <p>Não há repositórios!</p> }
       {repos && repos.length > 0 && (
-        <div>
+        <div className="flex flex-wrap justify-center items-center gap-6">
             {repos.map((repo: RepoProps) => (
                 <Repo key={repo.name} {...repo}/>
             ))}

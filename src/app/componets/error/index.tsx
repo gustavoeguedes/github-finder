@@ -1,8 +1,7 @@
 export function Error() {
   return (
     <div>
-      <h1>Ops!</h1>
-      <p>Algo deu errado!</p>
+      <p className="font-bold text-3xl mt-4">Usuário não encontrado!</p>
     </div>
   );
 }
